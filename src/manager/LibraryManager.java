@@ -153,7 +153,7 @@ public class LibraryManager implements IFunctionAdmin_Book <Book> {
 
     @Override
     public HashMap<Integer, ArrayList<Book>> getSaleBook() {
-        return salesBook;
+        return readAndWriteDataSell.readDataSell();
     }
 
     @Override

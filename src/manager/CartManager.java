@@ -105,7 +105,7 @@ public class CartManager implements IFunctionCustomer <Book>{
             }
             bufferedReader.close();
         }catch (IOException e) {
-            System.err.println("Lỗi đọc file '"+filename+"'");
+            System.err.println("Người dùng chưa có sản phẩm nào !");
         }
         return dataBuy;
     }
