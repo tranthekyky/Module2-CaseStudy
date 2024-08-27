@@ -5,6 +5,7 @@ import manager.CartManager;
 import manager.LibraryManager;
 import manager.UserManager;
 import model.Book;
+import read_write.ReadAndWriteDataSell;
 
 public class UserMenu {
     UserManager userManager = new UserManager();
@@ -12,7 +13,7 @@ public class UserMenu {
     CartManager cartManager = new CartManager();
     InputException inputException = new InputException();
 
-
+    ReadAndWriteDataSell readAndWriteDataSell = new ReadAndWriteDataSell();
     public void handleUserMenu (int idUser) {
         int choice ;
         do {
@@ -189,6 +190,7 @@ public class UserMenu {
             switch (choice) {
                 case 1:
                     libraryManager.saleBook(cartManager.getBookListInCart(), idUser);
+                    readAndWriteDataSell.writeDataSell(libraryManager.getSaleBook());
                     for (Book book : cartManager.getBookListInCart()) {
                         cartManager.saveDataBuy(idUser, book);
                     }

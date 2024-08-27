@@ -5,6 +5,7 @@ import model.Customer;
 import read_write.ReadAndWriteDataUser;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class UserManager implements IFunctionAdmin_Customer <Customer> {
     private ArrayList<Customer> customers;

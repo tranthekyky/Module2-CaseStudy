@@ -46,7 +46,7 @@ public class LoginManager {
         return false;
     }
 
-    public void signInAdmin(Admin admin) {
+    public void signUpAdmin(Admin admin) {
         this.acccountAdmin.add(admin);
         readAndWriteDataAccount.writeDataAccountAdmin(acccountAdmin);
     }
